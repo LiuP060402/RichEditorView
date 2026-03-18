@@ -106,6 +106,7 @@ import UIKit
         toolbarScroll.showsHorizontalScrollIndicator = false
         toolbarScroll.showsVerticalScrollIndicator = false
         toolbarScroll.backgroundColor = .clear
+        toolbarScroll.contentInsetAdjustmentBehavior = .never
 
         toolbarScroll.addSubview(toolbar)
 
@@ -134,7 +135,7 @@ import UIKit
         }
         toolbar.items = buttons
 
-        let defaultIconWidth: CGFloat = 28
+        let defaultIconWidth: CGFloat = 47
         let barButtonItemMargin: CGFloat = 12
         let width: CGFloat = buttons.reduce(0) {sofar, new in
             if let view = new.value(forKey: "view") as? UIView {
